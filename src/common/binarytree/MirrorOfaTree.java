@@ -23,6 +23,32 @@ Time Complexity: O(n), where n is the number of nodes in the tree. This is becau
 *           / \
 *          4   2
 *
+*   1. Iterate over map of stack
+*      Push all connected nodes of each node of first tree in map of  stack.
+*
+*  2. Again iterate over map for each node of second tree
+*      For example :
+*
+*      Let us take one node X of second tree
+*
+*      For this node X , check in map which stack is used
+*
+*      a = Top of that stack for node X present in second tree;
+*      b = Connected node of X in second tree
+*      if (a != b)
+*           return false;
+*      pop node X from stack.
+*
+*
+*  Approach 2: Using LinkedList
+*
+*   The main approach is to use one list of stack and one list of queue to store to value of nodes given in the form of two arrays.
+*
+*    1) Initialize both the lists with empty stack and empty queues respectively.
+*    2) Now, iterate over the lists
+*        Push all connected nodes of each node of first tree in list of stack and second tree list of queue.
+*    3) Now iterate over the array and pop item from both stack and queue and check if they are same, if not same then return 0.
+*
 * */
 public class MirrorOfaTree {
 }
